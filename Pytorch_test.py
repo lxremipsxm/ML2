@@ -1,3 +1,6 @@
+#the code is heavily influenced by the pytorch tutorial, so I've added comments explaining what I've learnt.
+
+
 import torch
 from torch import nn
 from torch.utils.data import DataLoader

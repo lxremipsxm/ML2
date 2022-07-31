@@ -50,3 +50,22 @@ class NeuralNetwork(nn.Module): #defining a class for the neural network
 
 model = NeuralNetwork().to(device)
 print(model)
+
+def train(dataloader, model, loss_fn, optimizer): #trains model for accuracy
+    size = len(dataloader.dataset)
+    model.train()
+    for batch, (X, y) in enumerate(dataloader): 
+        X, y - X.to(device), y.to(device)
+
+        pred = model(X)
+        loss = loss_fn(pred, y) #calculates the error (cost) 
+
+        #back propagation that adjusts the model's parameters
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+
+        if batch % 100 == 0: #if remainder of batch/100 is 0,
+            loss, current = loss.iten(), batch * len(X)
+            print(f"loss: {loss:>7f} [{current:>5d}/{size:>5d}]")
+

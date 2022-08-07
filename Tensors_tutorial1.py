@@ -25,3 +25,13 @@ zeros_tensor = torch.zeros(shape)
 print(f"Random Tensor: \n {rand_tensor} \n")
 print(f"Ones Tensor: \n {ones_tensor} \n")
 print(f"Zeros Tensor: \n {zeros_tensor} \n")
+
+#attributes
+
+#attributes can refer to shape, datatype, and the device where it is stored
+
+tensor = torch.rand(3, 4)
+
+print(f"Shape: {tensor.shape} ")
+print(f"Datatype: {tensor.dtype} ")
+print(f"Device: {tensor.device} ")

@@ -91,3 +91,11 @@ tensor2.add_(5) #adds 5 to every number in the tensor, stores it in tensor2
 print(tensor2)
 
 #converting from Tensor to Numpy Array
+t = torch.ones(5)
+print(f"t: {t}")
+n = t.numpy() #changes made to the tensor will affect the array too 
+print(f"n: {n}")
+
+#convert from np array to tensor
+n2 = np.ones(5)
+t = torch.from_numpy(n2) #changes made to the array reflect in the tensor
